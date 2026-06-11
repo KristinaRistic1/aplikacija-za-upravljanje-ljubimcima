@@ -24,8 +24,8 @@ require_once ROOT_PATH . '/classes/ProfilCuvara.php';
 /**
  * Pomocna funkcija za sigurno prikazivanje teksta (XSS zaštita).
  */
-function e(string $tekst): string {
-    return htmlspecialchars($tekst, ENT_QUOTES, 'UTF-8');
+function e(?string $tekst): string {
+    return htmlspecialchars($tekst ?? '', ENT_QUOTES, 'UTF-8');
 }
 
 /**
